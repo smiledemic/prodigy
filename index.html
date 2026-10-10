@@ -1,64 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prodigy</title>
-<link rel="icon" type="image/png" href="https://ws.ankomstudios.com/icons/prodigy-definitive-edition/icon.png">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
-    <link rel="stylesheet" href="./style.css">
-
-    <style>
-        body {
-            cursor: pointer;
-        }
-
-        #redirect-message {
-            position: fixed;
-            inset: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 20px;
-            font-family: Ubuntu, sans-serif;
-            font-size: 18px;
-            z-index: 9999;
-        }
-    </style>
+	<title>Prodigy</title>
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+	<link rel="stylesheet" type="text/css" href="./style.css">
 </head>
 
 <body>
-    <div id="redirect-message">
-        Redirecting to Old Prodigy...
-    </div>
-
-    <script>
-        const destination = "/oldprodigy";
-        let redirectStarted = false;
-
-        // Attempt the automatic redirect immediately.
-        window.location.replace(destination);
-
-        // Enable the fallback click after 3 seconds.
-        setTimeout(() => {
-            if (!redirectStarted) {
-                document.getElementById("redirect-message").textContent =
-                    "Click anywhere to redirect to Old Prodigy";
-            }
-        }, 3000);
-
-        // Ignore clicks during the first 3 seconds.
-        document.addEventListener("click", () => {
-            if (Date.now() - startTime < 3000 || redirectStarted) {
-                return;
-            }
-
-            redirectStarted = true;
-            window.location.href = destination;
-        });
-
-        const startTime = Date.now();
-    </script>
-</body>
+	<div class="title" align="center">
+	Daboss7173:Prodigy
+	</div>
+	<div align="center" style="position: relative; top: 30px">
+		<button onclick="window.location.href='/oldprodigy'" id="oldprodigy" class="button">
+		Old Prodigy
+		</button>
+	</div>
+	<div class="footer-container">
+		<div class="footer" align="center">
+			<a target="_blank" href="https://github.com/Daboss7173/Daboss7173.github.io">Check out my Github!</a>
+		</div>
+	</div>
 </html>
